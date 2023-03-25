@@ -12,18 +12,8 @@ import "./App.css";
 import { db } from "./firebase";
 
 function App() {
-  // const [data] = useCollectionData(db.collection("tasks"));
   const [tasks] = useCollection(db.collection("tasks"));
   console.log(tasks);
-  // console.log(data);
-
-  // const [tasks, setTasks] = useState([]);
-
-  // useEffect(() => {
-  //   if (data) {
-  //     setTasks(data);
-  //   }
-  // }, [data]);
 
   const [showAddTask, setShowAddTask] = useState(false);
 
@@ -44,8 +34,6 @@ function App() {
     docref.delete().then(() => {
       console.log("deleted");
     });
-
-    // setTasks(tasks.filter((task) => task.id !== id));
   };
 
   //Toggle Reminder
@@ -57,12 +45,6 @@ function App() {
       date: data.date,
       reminder: !data.reminder,
     });
-
-    // setTasks(
-    //   tasks.map((task) =>
-    //     task.id === id ? { ...task, reminder: !task.reminder } : task
-    //   )
-    // );
   };
 
   return (
