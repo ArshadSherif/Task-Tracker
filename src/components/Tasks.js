@@ -5,10 +5,11 @@ import "./Tasks.css";
 function Tasks({ tasks, deleteTask, onToggle }) {
   return (
     <div className="task_container">
-      {tasks?.map((task) => (
+      {tasks?.docs.map(task => (
         <Task
+          key={task.id}
           index={task.id}
-          task={task}
+          task={task.data()}
           deleteTask={deleteTask}
           onToggle={onToggle}
         />

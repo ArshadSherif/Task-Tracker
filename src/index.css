@@ -13,11 +13,7 @@
       animation: bg 15s linear infinite;
     
     }
-    
-    */ footer {
-      margin-top: 30px;
-      text-align: center;
-}
+
 
 @keyframes bg {
   0% {
