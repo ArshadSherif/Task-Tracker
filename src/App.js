@@ -48,23 +48,29 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header
-        onAdd={() => setShowAddTask(!showAddTask)}
-        showAdd={showAddTask}
-      />
-      {showAddTask && <AddTask onAdd={addTask} />}
-
-      {tasks?.docs.length > 0 ? (
-        <Tasks
-          tasks={tasks}
-          deleteTask={deleteTask}
-          onToggle={togglereminder}
+    <section>
+      <div className="container">
+        <Header
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
         />
-      ) : (
-        " No Tasks To Show"
-      )}
-    </div>
+        {showAddTask && <AddTask onAdd={addTask} />}
+
+        {tasks?.docs.length > 0 ? (
+          <Tasks
+            tasks={tasks}
+            deleteTask={deleteTask}
+            onToggle={togglereminder}
+          />
+        ) : (
+          " No Tasks To Show"
+        )}
+      </div>
+      <div class="air air1"></div>
+      <div class="air air2"></div>
+      <div class="air air3"></div>
+      <div class="air air4"></div>
+    </section>
   );
 }
 

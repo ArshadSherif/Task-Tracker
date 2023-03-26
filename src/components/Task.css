@@ -4,6 +4,7 @@
     padding: 10px 20px;
     cursor: pointer;
     animation: ani 0.6s ease-in 1 normal forwards;
+    box-shadow:  4px 5px 3px rgb(0 0 0 / 0.2);
 }
 
 .task.reminder {

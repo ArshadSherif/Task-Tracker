@@ -6,5 +6,8 @@
       padding: 30px;
       border-radius: 10px;
       background-color: transparent;
-      
+      position: relative;
+       z-index: 1000000;
+
   }
+

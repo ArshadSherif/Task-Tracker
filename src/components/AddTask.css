@@ -8,6 +8,8 @@
     padding-right: 16px;
     border-radius: 10px;
     background-color: whitesmoke;
+    animation: form_entry 1s ease-in 5ms 1 normal forwards;
+        box-shadow: 8px 8px 6px 5px rgb(0 0 0 / 0.2);
 }
 
 .form-control {
@@ -40,4 +42,47 @@
     justify-content: left;
     align-items: left;
     width: 50px;
+}
+@keyframes form_entry {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(-65px);
+    }
+
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(-28px);
+    }
+
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
 }
